@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Zombie
+  - Human
   layers:
   - Default
   - TransparentFX
@@ -13,9 +15,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Zombie
+  - Human
+  - Object
   - 
   - 
   - 
@@ -40,4 +42,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2408186605
+    locked: 0
+  - name: Tiles
+    uniqueID: 1555428969
+    locked: 0
+  - name: Humans
+    uniqueID: 1099657569
+    locked: 0
+  - name: Zombies
+    uniqueID: 2918422093
+    locked: 0
+  - name: Objects
+    uniqueID: 2024122053
+    locked: 0
+  - name: UI
+    uniqueID: 1372698919
     locked: 0

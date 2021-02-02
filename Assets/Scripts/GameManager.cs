@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private int InfectionPoints = 15;
+    public int InfectionPoints = 2;
 
     public Text InfectionPointsTxt; 
 
@@ -21,8 +21,14 @@ public class GameManager : MonoBehaviour
         
     }
 
-    void UpdateUI()
+    public void UpdateUI()
     {
         InfectionPointsTxt.text = InfectionPoints + "";
+    }
+
+    public void RemovePoints()
+    {
+        InfectionPoints--;
+        UpdateUI();
     }
 }

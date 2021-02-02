@@ -12,6 +12,10 @@ public class Human : Character
     private float randomDirectionTime;
     private float randomDirectionTimer;
 
+    public GameManager Settings;
+    public Zombie p_Zombie;
+    private Vector3 Location;
+
     protected override void Awake()
     {
         base.Awake();
@@ -19,7 +23,11 @@ public class Human : Character
 
     protected void Start()
     {
+        GameObject GameManager = GameObject.Find("GameManager");
+        Settings = GameManager.GetComponent<GameManager>();
+
         GetRandomDirection();
+
     }
 
     protected virtual void Update()
@@ -42,5 +50,20 @@ public class Human : Character
         
         randomDirectionTime = Random.Range(minRandomTime, maxRandomTime);
         randomDirectionTimer = randomDirectionTime;
+    }
+
+    private void OnMouseDown()
+    {
+        if (Settings.InfectionPoints > 0)
+        {
+            Location = transform.position;
+            Instantiate(p_Zombie, Location, Quaternion.identity);
+            Settings.RemovePoints();
+            Destroy(gameObject);
+        }
+        else
+        {
+            Debug.LogError("You don't have spare points!");
+        }
     }
 }

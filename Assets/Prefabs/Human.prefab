@@ -161,6 +161,8 @@ MonoBehaviour:
   moveSpeed: 90
   minRandomTime: 0.31
   maxRandomTime: 1.52
+  p_Zombie: {fileID: 3448195529405194917, guid: 8cd158ee1efbb49e397a84e80b3f9a12,
+    type: 3}
 --- !u!50 &1068178301939109005
 Rigidbody2D:
   serializedVersion: 4

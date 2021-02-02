@@ -7,7 +7,7 @@ public class Zombie : Character
     protected override void Update()
     {
         GetInput();
-        base.Update();
+        Move(0);
     }
 
     private void GetInput()

@@ -19,7 +19,7 @@ public class Character : MonoBehaviour
 
     protected virtual void Update()
     {
-        Move();
+        Move(0);
     }
 
     protected virtual void GetAllComponents()
@@ -28,30 +28,36 @@ public class Character : MonoBehaviour
         cirCollider = GetComponent<CircleCollider2D>();
     }
 
-    protected virtual void Move()
+    protected virtual void Move(int bounce)
     {
+        RestrictMovement(bounce);
         body.velocity = direction * moveSpeed;
     }
 
-    private void RestrictMovement()
+    private void RestrictMovement(int bounce)
     {
-        float minX = 0;
-        float minY = 0;
-        float maxX = 1;
-        float maxY = 1;
+        float radius = cirCollider.radius;
+        float widthHalf = 640 * 0.5f;
+        float heightHalf = 360 * 0.5f;
+        float minX = -(widthHalf - radius);
+        float minY = -(heightHalf - radius);
+        float maxX = widthHalf - radius;
+        float maxY = heightHalf - radius;
 
-        float x = Mathf.Clamp(transform.position.x + direction.x * moveSpeed, minX, maxX);
-        float y = Mathf.Clamp(transform.position.y + direction.y * moveSpeed, minY, maxY);
+        Vector2 currentPosition = transform.position;
+
+        float x = Mathf.Clamp(currentPosition.x + direction.x * (moveSpeed * Time.deltaTime), minX, maxX);
+        float y = Mathf.Clamp(currentPosition.y + direction.y * (moveSpeed * Time.deltaTime), minY, maxY);
 
         if (x <= minX && direction.x < 0)
-            direction.x = 1;
+            direction.x = 1 * bounce;
         else if (x >= maxX && direction.x > 0)
-            direction.x = -1f;
+            direction.x = -1f * bounce;
         
         if (y <= minY && direction.y < 0)
-            direction.y = 1;
+            direction.y = 1 * bounce;
         else if (y >= maxY && direction.y > 0)
-            direction.y = -1f;
+            direction.y = -1f * bounce;
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)

@@ -159,8 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 60
-  minRandomTime: 1.06
-  maxRandomTime: 3
+  minRandomTime: 0.31
+  maxRandomTime: 1.52
 --- !u!50 &1068178301939109005
 Rigidbody2D:
   serializedVersion: 4

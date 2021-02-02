@@ -37,8 +37,8 @@ public class Human : Character
 
     private void GetRandomDirection()
     {
-        direction.x = Random.Range(0, 1) * 2 - 1;
-        direction.y = Random.Range(0, 1) * 2 - 1;
+        direction.x = Random.Range(0, 2) * 2 - 1;
+        direction.y = Random.Range(0, 2) * 2 - 1;
         
         randomDirectionTime = Random.Range(minRandomTime, maxRandomTime);
         randomDirectionTimer = randomDirectionTime;

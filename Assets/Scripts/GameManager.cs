@@ -9,16 +9,9 @@ public class GameManager : MonoBehaviour
 
     public Text InfectionPointsTxt; 
 
-    // Start is called before the first frame update
     void Start()
     {
         UpdateUI();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void UpdateUI()

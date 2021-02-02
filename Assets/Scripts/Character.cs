@@ -32,4 +32,9 @@ public class Character : MonoBehaviour
     {
         body.velocity = direction * moveSpeed;
     }
+
+    protected virtual void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log($"{name} collided with {other.name}");
+    }
 }

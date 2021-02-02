@@ -33,6 +33,27 @@ public class Character : MonoBehaviour
         body.velocity = direction * moveSpeed;
     }
 
+    private void RestrictMovement()
+    {
+        float minX = 0;
+        float minY = 0;
+        float maxX = 1;
+        float maxY = 1;
+
+        float x = Mathf.Clamp(transform.position.x + direction.x * moveSpeed, minX, maxX);
+        float y = Mathf.Clamp(transform.position.y + direction.y * moveSpeed, minY, maxY);
+
+        if (x <= minX && direction.x < 0)
+            direction.x = 1;
+        else if (x >= maxX && direction.x > 0)
+            direction.x = -1f;
+        
+        if (y <= minY && direction.y < 0)
+            direction.y = 1;
+        else if (y >= maxY && direction.y > 0)
+            direction.y = -1f;
+    }
+
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log($"{name} collided with {other.name}");

@@ -28,7 +28,7 @@ public class Character : MonoBehaviour
         cirCollider = GetComponent<CircleCollider2D>();
     }
 
-    protected void Move()
+    protected virtual void Move()
     {
         body.velocity = direction * moveSpeed;
     }

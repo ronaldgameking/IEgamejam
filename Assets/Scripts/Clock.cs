@@ -13,6 +13,8 @@ public class Clock : MonoBehaviour
     public GameObject p_Clock45;
     private Vector3 Location;
 
+    private GameObject clockInstance;
+
     void Start()
     {
         Location = new Vector3(0, 0, -1);
@@ -24,19 +26,23 @@ public class Clock : MonoBehaviour
 
         if (Timer >= 0 && Timer <= 15)
         {
-            Instantiate(p_Clock, Location, p_Clock.transform.rotation);
+            if (clockInstance != null) Destroy(clockInstance);
+            clockInstance = Instantiate(p_Clock, Location, p_Clock.transform.rotation);
         }
         if (Timer >= 15 && Timer <= 30)
         {
-            Instantiate(p_Clock15, Location, p_Clock15.transform.rotation);
+            if (clockInstance != null) Destroy(clockInstance);
+            clockInstance = Instantiate(p_Clock15, Location, p_Clock15.transform.rotation);
         }
         if (Timer >= 30 && Timer <= 45)
         {
-            Instantiate(p_Clock30, Location, p_Clock30.transform.rotation);
+            if (clockInstance != null) Destroy(clockInstance);
+            clockInstance = Instantiate(p_Clock30, Location, p_Clock30.transform.rotation);
         }
         if (Timer >= 45 && Timer <= 60)
         {
-            Instantiate(p_Clock45, Location, p_Clock45.transform.rotation);
+            if (clockInstance != null) Destroy(clockInstance);
+            clockInstance = Instantiate(p_Clock45, Location, p_Clock45.transform.rotation);
         }
 
         if (Timer > 60)

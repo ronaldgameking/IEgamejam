@@ -20,8 +20,6 @@ public class Clock : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Timer + "");
-
         Timer += Time.deltaTime;
 
         if (Timer >= 0 && Timer <= 15)

@@ -18,6 +18,9 @@ public class Zombie : Character
     protected override void OnTriggerEnter2D(Collider2D other)
     {
         base.OnTriggerEnter2D(other);
-        Debug.Log($"{name} should eat and infect {other.name}");
+        if (other.CompareTag("Human"))
+        {
+            Debug.Log($"{name} should eat and infect {other.name}");
+        }
     }
 }

@@ -6,8 +6,11 @@ using Random = UnityEngine.Random;
 
 public class Human : Character
 {
-    [SerializeField] [Range(0.1f, 3f)] private float minRandomTime = 1f;
-    [SerializeField] [Range(1f, 10f)] private float maxRandomTime = 3f;
+    [SerializeField] [Range(0.1f, 3f)] private float minRandomTime = 0.3f;
+    [SerializeField] [Range(1f, 10f)] private float maxRandomTime = 1.5f;
+
+    [SerializeField] [Range(10f, 30f)] private float minSpeed = 15f;
+    [SerializeField] [Range(30f, 60f)] private float maxSpeed = 45f;
     
     private float randomDirectionTime;
     private float randomDirectionTimer;
@@ -25,6 +28,8 @@ public class Human : Character
     {
         GameObject Infection = GameObject.Find("Canvas/ShotObject");
         infectionShot = Infection.GetComponent<InfectionShot>();
+
+        moveSpeed = Random.Range(minSpeed, maxSpeed);
 
         GetRandomDirection();
 

@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
 {
     protected Rigidbody2D body;
     protected CircleCollider2D cirCollider;
+    protected SpriteRenderer spriteRenderer;
     protected Vector2 direction;
 
     [SerializeField] protected float moveSpeed;
@@ -26,12 +27,14 @@ public class Character : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         cirCollider = GetComponent<CircleCollider2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     protected virtual void Move(int bounce)
     {
         RestrictMovement(bounce);
         body.velocity = direction * moveSpeed;
+        spriteRenderer.sortingOrder = 5000 - Mathf.RoundToInt(transform.position.y);
     }
 
     private void RestrictMovement(int bounce)

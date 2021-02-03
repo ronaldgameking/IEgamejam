@@ -25,7 +25,6 @@ public class AudioManager : MonoBehaviour
         }   
     }
 
-
     //Play da sound specified
     public void Play(string name)
     {   

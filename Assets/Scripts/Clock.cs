@@ -57,6 +57,5 @@ public class Clock : MonoBehaviour
         PlayBell();
         quarterTimer -= 15;
     }
-
 }
 public enum ClockState { Church, Cafe, Fabric, Home }

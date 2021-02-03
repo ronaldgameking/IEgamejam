@@ -16,6 +16,7 @@ public class Human : Character
     private float randomDirectionTimer;
 
     public InfectionShot infectionShot;
+    public GameManager Settings;
     public Zombie p_Zombie;
     private Vector3 Location;
 
@@ -28,6 +29,8 @@ public class Human : Character
     {
         GameObject Infection = GameObject.Find("Canvas/ShotObject");
         infectionShot = Infection.GetComponent<InfectionShot>();
+        GameObject gameManager = GameObject.Find("GameManager");
+        Settings = gameManager.GetComponent<GameManager>();
 
         moveSpeed = Random.Range(minSpeed, maxSpeed);
 
@@ -61,6 +64,7 @@ public class Human : Character
     {
         if (infectionShot.CanShoot())
         {
+            //Settings.RemoveHuman();
             Location = transform.position;
             Instantiate(p_Zombie, Location, Quaternion.identity);
             infectionShot.Reset();

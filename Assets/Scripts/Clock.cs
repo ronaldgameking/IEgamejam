@@ -25,10 +25,11 @@ public class Clock : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        //return;
+        return;
 
 
         // TODO: RE-WRITE THIS SCRIPT!!! (Please...)
+        // Note: Never Instatiate or Destroy in runtime. Very in efficient and expensive for the computer.
 
         if (timer >= 0 && timer <= 15)
         {

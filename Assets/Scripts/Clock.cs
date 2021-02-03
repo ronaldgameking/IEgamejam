@@ -58,4 +58,11 @@ public class Clock : MonoBehaviour
         quarterTimer -= 15;
     }
 }
-public enum ClockState { Church, Cafe, Fabric, Home }
+
+public enum ClockState : int
+{
+    Church = 0,
+    Cafe,
+    Fabric,
+    Home
+}

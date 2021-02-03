@@ -6,56 +6,47 @@ public class Clock : MonoBehaviour
 {
     public float timer;
 
-    // TODO: ????????????
     public GameObject p_Clock;
-    public GameObject p_Clock15;
-    public GameObject p_Clock30;
-    public GameObject p_Clock45;
-    
+
     private Vector3 Location;
 
-    [SerializeField] private GameObject clockInstance;
+    [SerializeField] [ReadOnly] private GameObject clockInstance;
 
     void Start()
     {
         Location = new Vector3(0, 0, -1);
+        clockInstance = Instantiate(p_Clock, Location, p_Clock.transform.rotation);
     }
 
     void Update()
     {
         timer += Time.deltaTime;
 
-        return;
-
-
-        // TODO: RE-WRITE THIS SCRIPT!!! (Please...)
-        // Note: Never Instatiate or Destroy in runtime. Very in efficient and expensive for the computer.
 
         if (timer >= 0 && timer <= 15)
         {
-            if (clockInstance != null) Destroy(clockInstance);
-            clockInstance = Instantiate(p_Clock, Location, p_Clock.transform.rotation);
+            clockInstance.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if (timer > 15 && timer <= 30)
         {
-            if (clockInstance != null) Destroy(clockInstance);
-            clockInstance = Instantiate(p_Clock15, Location, p_Clock15.transform.rotation);
+            clockInstance.transform.rotation = Quaternion.Euler(0, 0, -90);
         }
         if (timer > 30 && timer <= 45)
         {
-            if (clockInstance != null) Destroy(clockInstance);
-            clockInstance = Instantiate(p_Clock30, Location, p_Clock30.transform.rotation);
+            clockInstance.transform.rotation = Quaternion.Euler(0, 0, 180);
         }
         if (timer > 45 && timer <= 60)
         {
-            if (clockInstance != null) Destroy(clockInstance);
-            clockInstance = Instantiate(p_Clock45, Location, p_Clock45.transform.rotation);
+            clockInstance.transform.rotation = Quaternion.Euler(0, 0, 90)  ;
         }
 
-        if (timer > 60)
+        if (DoComp())
         {
             timer = 0;
         }
     }
-
+    public bool DoComp()
+    {
+        return timer > 60;
+    }
 }

@@ -12,7 +12,7 @@ public class Human : Character
     private float randomDirectionTime;
     private float randomDirectionTimer;
 
-    public GameManager Settings;
+    public InfectionShot infectionShot;
     public Zombie p_Zombie;
     private Vector3 Location;
 
@@ -23,8 +23,8 @@ public class Human : Character
 
     protected void Start()
     {
-        GameObject GameManager = GameObject.Find("GameManager");
-        Settings = GameManager.GetComponent<GameManager>();
+        GameObject Infection = GameObject.Find("Canvas/ShotObject");
+        infectionShot = Infection.GetComponent<InfectionShot>();
 
         GetRandomDirection();
 
@@ -54,16 +54,16 @@ public class Human : Character
 
     private void OnMouseDown()
     {
-        if (Settings.InfectionPoints > 0)
+        if (infectionShot.CanShoot())
         {
             Location = transform.position;
             Instantiate(p_Zombie, Location, Quaternion.identity);
-            Settings.RemovePoints();
+            infectionShot.Reset();
             Destroy(gameObject);
         }
         else
         {
-            Debug.LogError("You don't have spare points!");
+            Debug.LogError("The Syringe is empty!");
         }
     }
 }

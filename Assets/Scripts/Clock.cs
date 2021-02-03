@@ -6,23 +6,22 @@ public class Clock : MonoBehaviour
 {
     public float timer;
     public float quarterTimer = 0;
-    public float Speed = 4;
+    public float speed = 4;
     public Transform handTransform;
 
     public AudioManager Bell;
-
-    public ClockState currentclockstate;
+    public ClockState currentClockState;
 
     private void Start()
     {
-        currentclockstate = ClockState.Church;
+        currentClockState = ClockState.Church;
         GameObject audio = GameObject.Find("GameManager");
         Bell = audio.GetComponent<AudioManager>();
     }
     void Update()
     {
-        timer = (timer + Time.deltaTime * Speed) % 60;
-        quarterTimer += Time.deltaTime * Speed;
+        timer = (timer + Time.deltaTime * speed) % 60;
+        quarterTimer += Time.deltaTime * speed;
 
         handTransform.rotation = Quaternion.Euler(0, 0, -timer * 6);
 
@@ -41,19 +40,19 @@ public class Clock : MonoBehaviour
     {
         if (timer >= 45)
         {
-            currentclockstate = ClockState.Home;
+            currentClockState = ClockState.Home;
         }
         else if (timer >= 30)
         {
-            currentclockstate = ClockState.Fabric;
+            currentClockState = ClockState.Fabric;
         }
         else if (timer >= 15)
         {
-            currentclockstate = ClockState.Cafe;
+            currentClockState = ClockState.Cafe;
         }
         else if (timer >= 0)
         {
-            currentclockstate = ClockState.Church;
+            currentClockState = ClockState.Church;
         }
         PlayBell();
         quarterTimer -= 15;

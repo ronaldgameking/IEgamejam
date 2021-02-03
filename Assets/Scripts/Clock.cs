@@ -9,34 +9,27 @@ public class Clock : MonoBehaviour
     public float speed = 4;
     public Transform handTransform;
 
-    public AudioManager Bell;
+    public AudioManager bell;
+    public GameManager gm;
     public ClockState currentClockState;
 
     private void Start()
     {
         currentClockState = ClockState.Church;
-        GameObject audio = GameObject.Find("GameManager");
-        Bell = audio.GetComponent<AudioManager>();
+        if (bell == null) bell = GameObject.Find("GameManager").GetComponent<AudioManager>();
     }
-    void Update()
+    void LateUpdate()
     {
-        timer = (timer + Time.deltaTime * speed) % 60;
-        quarterTimer += Time.deltaTime * speed;
-
+        timer = gm.timer;
         handTransform.rotation = Quaternion.Euler(0, 0, -timer * 6);
-
-        if (quarterTimer >= 15)
-        {
-            ChangeState();
-        }
     }
 
     public void PlayBell()
     {
-        Bell.Play("Bell");
+        bell.Play("Bell");
     }
 
-    public void ChangeState()
+    public void ChangeState(float timer)
     {
         if (timer >= 45)
         {

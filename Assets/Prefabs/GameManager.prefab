@@ -60,9 +60,9 @@ MonoBehaviour:
   - clip: {fileID: 8300000, guid: a467771e47cd0cf4d9c474c69f552198, type: 3}
     ID: 0
     name: Bell
-    volume: 0
-    pitch: 0
+    volume: 0.15
+    pitch: 1
     source: {fileID: 0}
     loop: 0
     spacialBlend: 0
-    mixerGroup: {fileID: 0}
+    mixerGroup: {fileID: 24300002, guid: 0b9bd1b3e8c50de408c6333dacf3ac3c, type: 2}

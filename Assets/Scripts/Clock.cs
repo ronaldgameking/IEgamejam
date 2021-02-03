@@ -6,11 +6,7 @@ public class Clock : MonoBehaviour
 {
     public float timer;
 
-    // TODO: ????????????
     public GameObject p_Clock;
-    //public GameObject p_Clock15;
-    //public GameObject p_Clock30;
-    //public GameObject p_Clock45;
 
     private Vector3 Location;
 

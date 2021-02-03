@@ -3,7 +3,7 @@
 public class GameManager : MonoBehaviour
 {
     public Clock clockInstance;
-    [ReadOnly] public float timer;
+    public float timer;
     public float quarterTimer = 0;
     public float speed = 4;
 

@@ -208,9 +208,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   quarterTimer: 0
-  speed: 4
+  speed: 2
   handTransform: {fileID: 5506800557141106430}
-  Bell: {fileID: 0}
+  bell: {fileID: 0}
+  gm: {fileID: 0}
   currentClockState: 0
 --- !u!1 &6571405000311430179
 GameObject:

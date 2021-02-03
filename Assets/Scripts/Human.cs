@@ -62,9 +62,9 @@ public class Human : Character
 
     private void OnMouseDown()
     {
-        if (infectionShot.CanShoot())
+        if (infectionShot.CanShoot() && Settings.zombieAmount > 1)
         {
-            //Settings.RemoveHuman();
+            Settings.RemoveHuman();
             Location = transform.position;
             Instantiate(p_Zombie, Location, Quaternion.identity);
             infectionShot.Reset();

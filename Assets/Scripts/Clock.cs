@@ -7,10 +7,12 @@ public class Clock : MonoBehaviour
 {
     public float Timer;
 
+    // TODO: ????????????
     public GameObject p_Clock;
     public GameObject p_Clock15;
     public GameObject p_Clock30;
     public GameObject p_Clock45;
+    
     private Vector3 Location;
 
     private GameObject clockInstance;
@@ -23,6 +25,10 @@ public class Clock : MonoBehaviour
     void Update()
     {
         Timer += Time.deltaTime;
+
+        return;
+        
+        // TODO: RE-WRITE THIS SCRIPT!!! (Please...)
 
         if (Timer >= 0 && Timer <= 15)
         {

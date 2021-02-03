@@ -2,7 +2,7 @@
 
 public class GameManager : MonoBehaviour
 {
-    [ReadOnly] public float timer;
+    public float timer;
 
     private void Update()
     {

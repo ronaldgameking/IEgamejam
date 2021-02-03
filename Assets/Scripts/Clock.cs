@@ -20,7 +20,7 @@ public class Clock : MonoBehaviour
 
     void Update()
     {
-        timer += Time.deltaTime;
+        timer += Time.deltaTime * 8;
 
 
         if (timer >= 0 && timer <= 15)
@@ -40,10 +40,13 @@ public class Clock : MonoBehaviour
             clockInstance.transform.rotation = Quaternion.Euler(0, 0, 90)  ;
         }
 
-        if (timer > 60)
+        if (DoComp())
         {
             timer = 0;
         }
     }
-
+    public bool DoComp()
+    {
+        return timer > 60;
+    }
 }

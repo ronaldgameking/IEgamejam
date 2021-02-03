@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3996752367965763347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3996752367965763348}
+  - component: {fileID: 3996752367965763349}
+  - component: {fileID: 3996752367965763346}
+  - component: {fileID: 7083122981640957587}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3996752367965763348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996752367965763347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 257.76434, y: 111.44177, z: -943.773}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3996752367965763349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996752367965763347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a360ea4192cc7804baefedb205353fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InfectionPoints: 15
+  InfectionPointsTxt: {fileID: 0}
+--- !u!114 &3996752367965763346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996752367965763347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cebd22f70f1fae479af7190e6bdbf37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  p_Clock: {fileID: 5399642594407694793, guid: cca3c66e1d409bd4d937178027b5fd3d, type: 3}
+  p_Clock15: {fileID: 1837561933577074441, guid: 3830636077ff65e448b22ac11f40c3bc,
+    type: 3}
+  p_Clock30: {fileID: 3324077199066142618, guid: 6ca2e76bbcea5da4a8809b81d94a1d47,
+    type: 3}
+  p_Clock45: {fileID: 3826718274648048917, guid: aab98d1b9717dbd469f9a3016b739e39,
+    type: 3}
+  clockInstance: {fileID: 0}
+--- !u!114 &7083122981640957587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996752367965763347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e8967d784ab59549b311b1973bfa63b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - clip: {fileID: 8300000, guid: a467771e47cd0cf4d9c474c69f552198, type: 3}
+    ID: 0
+    name: Bell
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+    loop: 0
+    spacialBlend: 0
+    mixerGroup: {fileID: 0}

@@ -40,8 +40,8 @@ public class Character : MonoBehaviour
     private void RestrictMovement(int bounce)
     {
         float radius = cirCollider.radius;
-        float widthHalf = 640 * 0.5f;
-        float heightHalf = 360 * 0.5f;
+        float widthHalf = 1920 * 0.5f;
+        float heightHalf = 1080 * 0.5f;
         float minX = -(widthHalf - radius);
         float minY = -(heightHalf - radius);
         float maxX = widthHalf - radius;

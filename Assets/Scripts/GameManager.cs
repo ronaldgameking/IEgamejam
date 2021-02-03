@@ -4,7 +4,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public Clock clockInstance;
-    public float timer;
+    [ReadOnly] public float timer;
     public float quarterTimer = 0;
     public float speed = 4;
 

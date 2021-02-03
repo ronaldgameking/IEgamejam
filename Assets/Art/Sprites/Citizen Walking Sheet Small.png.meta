@@ -254,7 +254,7 @@ TextureImporter:
         serializedVersion: 2
         x: 780
         y: 0
-        width: 196
+        width: 195.5
         height: 243
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -293,7 +293,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: d82eaa7ff10eb4a7483abee63aa1682d
     internalID: 0
     vertices: []
     indices: 

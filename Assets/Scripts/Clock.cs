@@ -5,48 +5,14 @@ using UnityEngine;
 public class Clock : MonoBehaviour
 {
     public float timer;
-
-    public GameObject p_Clock;
-
-    private Vector3 Location;
-
-    [SerializeField] [ReadOnly] private GameObject clockInstance;
-
-    void Start()
-    {
-        Location = new Vector3(0, 0, -1);
-        clockInstance = Instantiate(p_Clock, Location, p_Clock.transform.rotation);
-    }
+    public float Speed = 4;
+    public Transform handTransform;
 
     void Update()
     {
-        timer += Time.deltaTime;
+        timer = (timer + Time.deltaTime * Speed) % 60;
 
-
-        if (timer >= 0 && timer <= 15)
-        {
-            clockInstance.transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
-        if (timer > 15 && timer <= 30)
-        {
-            clockInstance.transform.rotation = Quaternion.Euler(0, 0, -90);
-        }
-        if (timer > 30 && timer <= 45)
-        {
-            clockInstance.transform.rotation = Quaternion.Euler(0, 0, 180);
-        }
-        if (timer > 45 && timer <= 60)
-        {
-            clockInstance.transform.rotation = Quaternion.Euler(0, 0, 90)  ;
-        }
-
-        if (DoComp())
-        {
-            timer = 0;
-        }
+        handTransform.rotation = Quaternion.Euler(0, 0, -timer * 6);
     }
-    public bool DoComp()
-    {
-        return timer > 60;
-    }
+
 }

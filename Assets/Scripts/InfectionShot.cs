@@ -25,7 +25,6 @@ public class InfectionShot : MonoBehaviour
     public void Reset()
     {
         Timer = 0;
-        RechargeTime = 1;
     }
 
     public bool CanShoot()

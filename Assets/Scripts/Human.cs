@@ -12,7 +12,7 @@ public class Human : Character
     private float randomDirectionTime;
     private float randomDirectionTimer;
     
-    public Zombie zombiePrefab;
+    [SerializeField] private Zombie zombiePrefab;
     private Vector2 targetLocation;
 
     protected override void Awake()

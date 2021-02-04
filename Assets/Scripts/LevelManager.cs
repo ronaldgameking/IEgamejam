@@ -25,8 +25,8 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public Transform GetLocation(ClockState clockState)
+    public Transform GetCurrentLocation()
     {
-        return locations[(int)clockState];
+        return locations[(int)Clock.Instance.CurrentClockState];
     }
 }

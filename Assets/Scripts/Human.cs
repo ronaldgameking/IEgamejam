@@ -13,7 +13,6 @@ public class Human : Character
     private float randomDirectionTimer;
     
     [SerializeField] private Zombie zombiePrefab;
-    private Vector2 targetLocation;
 
     protected override void Awake()
     {
@@ -24,8 +23,8 @@ public class Human : Character
     {
         moveSpeed = Random.Range(minSpeed, maxSpeed);
 
-        GetRandomDirection();
-
+        // GetRandomDirection();
+        SetNewTarget();
     }
 
     protected virtual void Update()
@@ -56,10 +55,15 @@ public class Human : Character
             TurnToZombie();
     }
 
+    public void SetNewTarget()
+    {
+        target = LevelManager.Instance.GetCurrentLocation();
+    }
+
     public void TurnToZombie()
     {
-        GameManager.Instance.RemoveCharacter(false);
-        Instantiate(zombiePrefab, transform.position, Quaternion.identity);
+        Character zombie = Instantiate(zombiePrefab, transform.position, Quaternion.identity).GetComponent<Character>();
+        GameManager.Instance.RemoveCharacter(this, zombie);
         InfectionShot.Instance.Reset();
         Destroy(gameObject);
     }

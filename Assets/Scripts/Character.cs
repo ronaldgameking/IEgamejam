@@ -10,6 +10,7 @@ public class Character : MonoBehaviour
     [SerializeField] protected float searchRadius;
 
     [SerializeField] protected float moveSpeed;
+    protected Transform target;
 
     protected virtual void Awake()
     {
@@ -30,12 +31,21 @@ public class Character : MonoBehaviour
 
     protected virtual void Move(int bounce)
     {
+        UpdateDirection();
         RestrictMovement(bounce);
         body.velocity = direction * moveSpeed;
         spriteRenderer.sortingOrder = -Mathf.RoundToInt(transform.position.y);
         
         if (direction.x != 0)
             spriteRenderer.flipX = Mathf.Sign(direction.x) == 1 ? false : true;
+    }
+
+    private void UpdateDirection()
+    {
+        if (target == null)
+            return;
+
+        direction = (target.position - transform.position).normalized;
     }
 
     private void RestrictMovement(int bounce)

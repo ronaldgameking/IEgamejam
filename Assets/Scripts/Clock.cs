@@ -11,6 +11,11 @@ public class Clock : MonoBehaviour
     [SerializeField] private float speed = 4;
 
     [SerializeField] private ClockState currentClockState;
+    public ClockState CurrentClockState
+    {
+        get => currentClockState;
+        set => currentClockState = value;
+    }
 
     private void Awake()
     {
@@ -46,5 +51,11 @@ public class Clock : MonoBehaviour
 
         AudioManager.Instance.Play("Bell");
         quarterTimer -= 15;
+
+        foreach (Character character in GameManager.Instance.Characters)
+        {
+            if (character.CompareTag("Human"))
+                ((Human)character).SetNewTarget();
+        }
     }
 }

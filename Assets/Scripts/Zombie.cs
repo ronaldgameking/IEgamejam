@@ -19,7 +19,7 @@ public class Zombie : Character
         lifeTimer -= Time.deltaTime;
 
         if (lifeTimer <= 0)
-            GameManager.Instance.RemoveCharacter(true);
+            GameManager.Instance.RemoveCharacter(this, null);
     }
 
     private void GetInput()

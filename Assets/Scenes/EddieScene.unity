@@ -780,6 +780,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7223468141155557413, guid: 8c3f419a69f937542a27d3debc8465bc,
+        type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223468141155557413, guid: 8c3f419a69f937542a27d3debc8465bc,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223468141420119770, guid: 8c3f419a69f937542a27d3debc8465bc,
+        type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223468141420119770, guid: 8c3f419a69f937542a27d3debc8465bc,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c3f419a69f937542a27d3debc8465bc, type: 3}
 --- !u!1001 &1399478681

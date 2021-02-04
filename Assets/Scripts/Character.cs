@@ -64,6 +64,6 @@ public class Character : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"{name} collided with {other.name}");
+        // Debug.Log($"{name} collided with {other.name}");
     }
 }

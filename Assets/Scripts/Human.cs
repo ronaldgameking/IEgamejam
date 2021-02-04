@@ -63,16 +63,15 @@ public class Human : Character
     private void OnMouseDown()
     {
         if (infectionShot.CanShoot() && Settings.zombieAmount > 1)
-        {
-            Settings.RemoveHuman();
-            Location = transform.position;
-            Instantiate(p_Zombie, Location, Quaternion.identity);
-            infectionShot.Reset();
-            Destroy(gameObject);
-        }
-        else
-        {
-            Debug.LogError("The Syringe is empty!");
-        }
+            TurnToZombie();
+    }
+
+    public void TurnToZombie()
+    {
+        Settings.RemoveHuman();
+        Location = transform.position;
+        Instantiate(p_Zombie, Location, Quaternion.identity);
+        infectionShot.Reset();
+        Destroy(gameObject);
     }
 }

@@ -193,6 +193,7 @@ MonoBehaviour:
   minSpeed: 15
   maxSpeed: 45
   infectionShot: {fileID: 0}
+  Settings: {fileID: 0}
   p_Zombie: {fileID: 3448195529405194917, guid: 8cd158ee1efbb49e397a84e80b3f9a12,
     type: 3}
 --- !u!50 &1068178301939109005
@@ -203,7 +204,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8862892955900668163}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -215,7 +216,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &8967600860773781682
 CircleCollider2D:
   m_ObjectHideFlags: 0

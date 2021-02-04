@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: 9935d13ac7e5ea244b59ab5735857971
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6429008393294294520
+    second: Zombie_Walk_01
+  - first:
+      213: 3455510095915544648
+    second: Zombie_Walk_02
+  - first:
+      213: -7159938369809531447
+    second: Zombie_Walk_03
+  - first:
+      213: 5956831414360421640
+    second: Zombie_Walk_04
+  - first:
+      213: 7396533665489504185
+    second: Zombie_Walk_05
+  - first:
+      213: 6528726513585519076
+    second: Zombie_Walk_06
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -145,7 +163,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Zombie_Walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 145
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80250bbbde297c6a0800000000000000
+      internalID: -6429008393294294520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Walk_02
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 0
+        width: 145
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84072d8cf1074ff20800000000000000
+      internalID: 3455510095915544648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Walk_03
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 0
+        width: 145
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd30d5dcf9c2ac90800000000000000
+      internalID: -7159938369809531447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Walk_04
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 0
+        width: 145
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80537d75c9aeaa250800000000000000
+      internalID: 5956831414360421640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Walk_05
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 0
+        width: 145
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b748b42e24c5a660800000000000000
+      internalID: 7396533665489504185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Walk_06
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 0
+        width: 145
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e970f56c22ba9a50800000000000000
+      internalID: 6528726513585519076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -44,7 +44,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 01aaf4b55253947708f0ff58cdf2dccc, type: 3}
   - {fileID: 21300000, guid: 517c4847c9b64ab46bc30d9b4af02779, type: 3}
   - {fileID: 21300000, guid: 93c55779dd73a4b3c9c3b3494293a540, type: 3}
-  - {fileID: 21300000, guid: 9935d13ac7e5ea244b59ab5735857971, type: 3}
+  - {fileID: 6528726513585519076, guid: 9935d13ac7e5ea244b59ab5735857971, type: 3}
+  - {fileID: 5956831414360421640, guid: 9935d13ac7e5ea244b59ab5735857971, type: 3}
+  - {fileID: 7396533665489504185, guid: 9935d13ac7e5ea244b59ab5735857971, type: 3}
+  - {fileID: 3455510095915544648, guid: 9935d13ac7e5ea244b59ab5735857971, type: 3}
+  - {fileID: -7159938369809531447, guid: 9935d13ac7e5ea244b59ab5735857971, type: 3}
+  - {fileID: -6429008393294294520, guid: 9935d13ac7e5ea244b59ab5735857971, type: 3}
   - {fileID: 21300000, guid: f685b5fbd24864cb489728d5c59553a7, type: 3}
   - {fileID: 21300000, guid: e324022c4db069040a946f39c95fbf47, type: 3}
   - {fileID: 21300000, guid: d9eadaacfc9bfbb4080e412d9e770cfc, type: 3}
@@ -64,7 +69,12 @@ SpriteAtlas:
   - button_1
   - tree_2
   - factory
-  - Zombie' Walking Sheet Small
+  - Zombie_Walk_06
+  - Zombie_Walk_04
+  - Zombie_Walk_05
+  - Zombie_Walk_02
+  - Zombie_Walk_03
+  - Zombie_Walk_01
   - barrrr
   - background
   - button_2

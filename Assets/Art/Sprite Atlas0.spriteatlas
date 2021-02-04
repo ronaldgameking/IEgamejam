@@ -37,6 +37,7 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: 5024a080d1df74f6d9e7e0072e33f25b, type: 3}
   - {fileID: 21300000, guid: fdc55a81182a2491281af1365ce2e056, type: 3}
+  - {fileID: 21300000, guid: 8a44aec1710c2494180aa9f4af6f9e0b, type: 3}
   - {fileID: 21300000, guid: 93eae76262fb6ed48a5c49972975a2c5, type: 3}
   - {fileID: 21300000, guid: 9bea07b256b394584893b705d692a58e, type: 3}
   - {fileID: 21300000, guid: 0aa2d0d255c8e45459d53973f36c1c71, type: 3}
@@ -45,6 +46,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: d060b885087b6534f919e045f0431fbb, type: 3}
   - {fileID: 21300000, guid: 01aaf4b55253947708f0ff58cdf2dccc, type: 3}
   - {fileID: 21300000, guid: f7b86fa68104c4fdd90b5135446e7cf6, type: 3}
+  - {fileID: 21300000, guid: 7acbf427530b44065ba347b67448dead, type: 3}
   - {fileID: 21300000, guid: 517c4847c9b64ab46bc30d9b4af02779, type: 3}
   - {fileID: 21300000, guid: 3742f70811312466897cbc5802afc8c8, type: 3}
   - {fileID: 21300000, guid: 93c55779dd73a4b3c9c3b3494293a540, type: 3}
@@ -67,6 +69,7 @@ SpriteAtlas:
   m_PackedSpriteNamesToIndex:
   - factory icon
   - village
+  - clock pointer
   - rock_1
   - church
   - tree_4
@@ -75,6 +78,7 @@ SpriteAtlas:
   - tree_1
   - button_1
   - needle
+  - clock
   - tree_2
   - bar icon
   - factory

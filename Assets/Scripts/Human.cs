@@ -6,8 +6,8 @@ public class Human : Character
     [SerializeField] [Range(0.1f, 3f)] private float minRandomTime = 0.3f;
     [SerializeField] [Range(1f, 10f)] private float maxRandomTime = 1.5f;
 
-    [SerializeField] [Range(10f, 30f)] private float minSpeed = 15f;
-    [SerializeField] [Range(30f, 60f)] private float maxSpeed = 45f;
+    [SerializeField] [Range(30f, 90f)] private float minSpeed = 70f;
+    [SerializeField] [Range(60f, 150f)] private float maxSpeed = 120f;
     
     private float randomDirectionTime;
     private float randomDirectionTimer;

@@ -31,6 +31,9 @@ public class Character : MonoBehaviour
         RestrictMovement(bounce);
         body.velocity = direction * moveSpeed;
         spriteRenderer.sortingOrder = -Mathf.RoundToInt(transform.position.y);
+        
+        if (direction.x != 0)
+            spriteRenderer.flipX = Mathf.Sign(direction.x) == 1 ? false : true;
     }
 
     private void RestrictMovement(int bounce)

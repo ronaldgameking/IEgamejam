@@ -128,10 +128,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1397782667292083757, guid: cca3c66e1d409bd4d937178027b5fd3d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7acbf427530b44065ba347b67448dead,
+        type: 3}
+    - target: {fileID: 3314317909019114554, guid: cca3c66e1d409bd4d937178027b5fd3d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8a44aec1710c2494180aa9f4af6f9e0b,
+        type: 3}
     - target: {fileID: 5399642594407694793, guid: cca3c66e1d409bd4d937178027b5fd3d,
         type: 3}
       propertyPath: m_Name
       value: Clock
+      objectReference: {fileID: 0}
+    - target: {fileID: 6571405000311430179, guid: cca3c66e1d409bd4d937178027b5fd3d,
+        type: 3}
+      propertyPath: m_Name
+      value: GFX
       objectReference: {fileID: 0}
     - target: {fileID: 7380323556778749249, guid: cca3c66e1d409bd4d937178027b5fd3d,
         type: 3}
@@ -349,6 +366,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
+        type: 3}
+      propertyPath: minSpeed
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 8658684187690143862, guid: 5fcf9e28992cb4871a682b1145abd301,
         type: 3}
       propertyPath: m_RootOrder
@@ -426,12 +453,12 @@ PrefabInstance:
     - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
         type: 3}
       propertyPath: maxSpeed
-      value: 45
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
         type: 3}
       propertyPath: minSpeed
-      value: 15
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
         type: 3}
@@ -536,12 +563,12 @@ PrefabInstance:
     - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
         type: 3}
       propertyPath: maxSpeed
-      value: 45
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
         type: 3}
       propertyPath: minSpeed
-      value: 15
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
         type: 3}
@@ -755,24 +782,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c3f419a69f937542a27d3debc8465bc, type: 3}
---- !u!1 &1381716181 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3177134544365629741, guid: 2e836300a6e984ce5bc040311251de3c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2559780980637983305}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1381716182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381716181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b46f7323f7b347a8bad08128ad1d616, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1399478681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -938,12 +947,12 @@ PrefabInstance:
     - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
         type: 3}
       propertyPath: maxSpeed
-      value: 45
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
         type: 3}
       propertyPath: minSpeed
-      value: 15
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
         type: 3}
@@ -1048,12 +1057,12 @@ PrefabInstance:
     - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
         type: 3}
       propertyPath: maxSpeed
-      value: 45
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
         type: 3}
       propertyPath: minSpeed
-      value: 15
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
         type: 3}

@@ -105,6 +105,10 @@ public class Character : MonoBehaviour
     
     private void OnDrawGizmos()
     {
+        if (cirCollider == null)
+            cirCollider = GetComponent<CircleCollider2D>();
         
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position + (Vector3)cirCollider.offset, searchRadius);
     }
 }

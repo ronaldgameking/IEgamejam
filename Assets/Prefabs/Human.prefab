@@ -190,7 +190,7 @@ MonoBehaviour:
   objectLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  searchRadius: 0
+  searchRadius: 196
   moveSpeed: 0
   minRandomTime: 0.3
   maxRandomTime: 1.5

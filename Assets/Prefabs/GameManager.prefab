@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a360ea4192cc7804baefedb205353fe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombieAmount: 99
+  zombieAmount: 0
 --- !u!114 &7083122981640957587
 MonoBehaviour:
   m_ObjectHideFlags: 0

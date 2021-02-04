@@ -163,7 +163,7 @@ MonoBehaviour:
   objectLayerMask:
     serializedVersion: 2
     m_Bits: 512
-  searchRadius: 0
+  searchRadius: 196
   moveSpeed: 60
   lifeTime: 30
 --- !u!50 &1068178301939109005

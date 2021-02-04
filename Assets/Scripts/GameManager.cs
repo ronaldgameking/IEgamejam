@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance = null;
     
-    public float zombieAmount = 99;
+    public float zombieAmount = 0;
 
     private List<Character> characters;
     public List<Character> Characters
@@ -30,7 +30,11 @@ public class GameManager : MonoBehaviour
         foreach (Character character in chars)
         {
             characters.Add(character);
+            if (character.CompareTag("Zombie"))
+                zombieAmount++;
         }
+        
+        UIManager.Instance.UpdateUI();
     }
 
     public void RemoveCharacter(Character oldCharacter, Character newCharacter)
@@ -38,9 +42,9 @@ public class GameManager : MonoBehaviour
         characters.Remove(oldCharacter);
         if (newCharacter != null)
             characters.Add(newCharacter);
-        
+
         if (oldCharacter.CompareTag("Zombie"))
-            zombieAmount--;
+            zombieAmount = Mathf.Clamp(zombieAmount + 1, 0, characters.Count);
         
         UIManager.Instance.UpdateUI();
     }

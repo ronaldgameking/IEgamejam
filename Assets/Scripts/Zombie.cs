@@ -4,7 +4,7 @@ using UnityEngine;
 public class Zombie : Character
 {
     private float lifeTimer;
-    [SerializeField] private float lifeTime = 30;
+    [SerializeField] private float lifeTime = 10;
 
     protected override void Awake()
     {
@@ -24,11 +24,4 @@ public class Zombie : Character
             GameManager.Instance.RemoveCharacter(this, null);
     }
 
-    protected override void OnTriggerEnter2D(Collider2D other)
-    {
-        base.OnTriggerEnter2D(other);
-        if (other.CompareTag("Human"))
-        {
-        }
-    }
 }

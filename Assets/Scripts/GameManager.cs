@@ -53,6 +53,10 @@ public class GameManager : MonoBehaviour
                 zombieAmount = Mathf.Clamp(zombieAmount + 1, 0, characters.Count);
         }
 
+        if (oldCharacter.CompareTag("Zombie"))
+        {
+            Destroy(oldCharacter.gameObject);
+        }
         UIManager.Instance.UpdateUI();
     }
 }

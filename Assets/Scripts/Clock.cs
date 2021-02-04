@@ -5,8 +5,6 @@ using UnityEngine;
 public class Clock : MonoBehaviour
 {
     public float timer;
-    public float quarterTimer = 0;
-    public float speed = 4;
     public Transform handTransform;
 
     public AudioManager bell;
@@ -47,8 +45,9 @@ public class Clock : MonoBehaviour
         {
             currentClockState = ClockState.Church;
         }
+        
         PlayBell();
-        quarterTimer -= 15;
+        gm.quarterTimer -= 15;
     }
 }
 

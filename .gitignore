@@ -61,3 +61,7 @@ crashlytics-build.properties
 /.idea/
 Assets/Audio.meta
 Assets/Scripts/ReadOnlyAttr.cs.meta
+Assets/Art/UI Elements/bar icon.png.meta
+Assets/Art/UI Elements/church icon.png.meta
+Assets/Art/UI Elements/hamer icon.png.meta
+Assets/Art/UI Elements/home icon.png.meta

@@ -6,7 +6,7 @@ public class InfectionShot : MonoBehaviour
     public static InfectionShot Instance = null;
     
     [SerializeField] private Image fillImage;
-    [SerializeField] private float rechargeTime = 1;
+    [SerializeField] private float rechargeTime = 8;
     private float timer;
 
     private void Awake()

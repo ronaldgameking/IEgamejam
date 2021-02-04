@@ -6,7 +6,7 @@ public class Character : MonoBehaviour
     protected CircleCollider2D cirCollider;
     protected SpriteRenderer spriteRenderer;
     protected Animator animator;
-    protected Vector2 direction;
+    protected Vector2 direction = Vector2.right;
     [SerializeField] protected LayerMask objectLayerMask;
     [SerializeField] protected float searchRadius;
     protected float moveSpeed;
@@ -59,16 +59,15 @@ public class Character : MonoBehaviour
         RestrictMovement(bounce);
         body.velocity = direction * moveSpeed;
         spriteRenderer.sortingOrder = -Mathf.RoundToInt(transform.position.y);
-        
-        if (direction.x != 0)
-            spriteRenderer.flipX = Mathf.Sign(direction.x) == 1 ? false : true;
+
+        spriteRenderer.flipX = Mathf.Sign(direction.x) == 1 ? false : true;
     }
 
     private void UpdateDirection()
     {
         if (target == null)
             return;
-
+        
         direction = (target.position - transform.position).normalized;
     }
 

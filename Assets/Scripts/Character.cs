@@ -9,8 +9,17 @@ public class Character : MonoBehaviour
     protected Vector2 direction;
     [SerializeField] protected LayerMask objectLayerMask;
     [SerializeField] protected float searchRadius;
+    protected float moveSpeed;
+    
+    [SerializeField] [Range(0.1f, 3f)] protected float minRandomTime = 0.3f;
+    [SerializeField] [Range(1f, 10f)] protected float maxRandomTime = 1.5f;
 
-    [SerializeField] protected float moveSpeed;
+    [SerializeField] [Range(30f, 90f)] protected float minSpeed = 70f;
+    [SerializeField] [Range(60f, 150f)] protected float maxSpeed = 120f;
+    
+    private float randomDirectionTime;
+    private float randomDirectionTimer;
+    
     protected Transform target;
     protected bool isDead;
     protected bool canMove = true;
@@ -22,6 +31,7 @@ public class Character : MonoBehaviour
     protected virtual void Awake()
     {
         GetAllComponents();
+        moveSpeed = Random.Range(minSpeed, maxSpeed);
     }
 
     protected virtual void Update()
@@ -92,10 +102,42 @@ public class Character : MonoBehaviour
     {
         Collider2D[] others = Physics2D.OverlapCircleAll(transform.position, searchRadius, objectLayerMask);
 
-        foreach (Collider2D other in others)
+        target = GetClosestTarget(others);
+    }
+
+    private Transform GetClosestTarget(Collider2D[] colliders)
+    {
+        Transform newTarget = null;
+        float closestDistance = float.MaxValue;
+        
+        foreach (Collider2D other in colliders)
         {
-            
+            float distance = Vector2.Distance(transform.position, (Vector2) other.transform.position + other.offset);
+
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                newTarget = other.transform;
+            }
         }
+
+        return newTarget;
+    }
+    
+    protected void UpdateTimers()
+    {
+        randomDirectionTimer -= Time.deltaTime;
+        if (randomDirectionTimer <= 0f)
+            GetRandomDirection();
+    }
+    
+    protected void GetRandomDirection()
+    {
+        direction.x = Random.Range(0, 2) * 2 - 1;
+        direction.y = Random.Range(0, 2) * 2 - 1;
+        
+        randomDirectionTime = Random.Range(minRandomTime, maxRandomTime);
+        randomDirectionTimer = randomDirectionTime;
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)

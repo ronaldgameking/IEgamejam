@@ -15,8 +15,8 @@ public class Zombie : Character
 
     protected override void Update()
     {
-        GetInput();
         Move(0);
+        UpdateTimers();
 
         lifeTimer -= Time.deltaTime;
 
@@ -24,18 +24,11 @@ public class Zombie : Character
             GameManager.Instance.RemoveCharacter(this, null);
     }
 
-    private void GetInput()
-    {
-        direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-    }
-    
     protected override void OnTriggerEnter2D(Collider2D other)
     {
         base.OnTriggerEnter2D(other);
         if (other.CompareTag("Human"))
         {
-            // ((Human)other).BecomeZombie();
-            // Debug.Log($"{name} should eat and infect {other.name}");
         }
     }
 }

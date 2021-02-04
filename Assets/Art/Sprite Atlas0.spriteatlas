@@ -35,6 +35,7 @@ SpriteAtlas:
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 5024a080d1df74f6d9e7e0072e33f25b, type: 3}
   - {fileID: 21300000, guid: fdc55a81182a2491281af1365ce2e056, type: 3}
   - {fileID: 21300000, guid: 93eae76262fb6ed48a5c49972975a2c5, type: 3}
   - {fileID: 21300000, guid: 9bea07b256b394584893b705d692a58e, type: 3}
@@ -43,6 +44,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f2e089e488f784ec99744afb64dc51f7, type: 3}
   - {fileID: 21300000, guid: d060b885087b6534f919e045f0431fbb, type: 3}
   - {fileID: 21300000, guid: 01aaf4b55253947708f0ff58cdf2dccc, type: 3}
+  - {fileID: 21300000, guid: f7b86fa68104c4fdd90b5135446e7cf6, type: 3}
   - {fileID: 21300000, guid: 517c4847c9b64ab46bc30d9b4af02779, type: 3}
   - {fileID: 21300000, guid: 3742f70811312466897cbc5802afc8c8, type: 3}
   - {fileID: 21300000, guid: 93c55779dd73a4b3c9c3b3494293a540, type: 3}
@@ -52,18 +54,18 @@ SpriteAtlas:
   - {fileID: 3455510095915544648, guid: 9935d13ac7e5ea244b59ab5735857971, type: 3}
   - {fileID: -7159938369809531447, guid: 9935d13ac7e5ea244b59ab5735857971, type: 3}
   - {fileID: -6429008393294294520, guid: 9935d13ac7e5ea244b59ab5735857971, type: 3}
+  - {fileID: 21300000, guid: cc461e1b81fcf42289e8cb1dfc9891ff, type: 3}
   - {fileID: 21300000, guid: f685b5fbd24864cb489728d5c59553a7, type: 3}
   - {fileID: 21300000, guid: e324022c4db069040a946f39c95fbf47, type: 3}
   - {fileID: 21300000, guid: d9eadaacfc9bfbb4080e412d9e770cfc, type: 3}
-  - {fileID: 21300000, guid: f315bb7d98dd54a389d3f13cf470484b, type: 3}
   - {fileID: 2826491080444966022, guid: ff2c0b0e6e3d44d3abe9b746e1f1da04, type: 3}
   - {fileID: -6933795937094521575, guid: ff2c0b0e6e3d44d3abe9b746e1f1da04, type: 3}
   - {fileID: 8848238221287520932, guid: ff2c0b0e6e3d44d3abe9b746e1f1da04, type: 3}
   - {fileID: -4258994298534459032, guid: ff2c0b0e6e3d44d3abe9b746e1f1da04, type: 3}
   - {fileID: 8783791707639866031, guid: ff2c0b0e6e3d44d3abe9b746e1f1da04, type: 3}
   - {fileID: 1958415130416078322, guid: ff2c0b0e6e3d44d3abe9b746e1f1da04, type: 3}
-  - {fileID: 21300000, guid: c9a924df254cf46e4b24a123b7626f4a, type: 3}
   m_PackedSpriteNamesToIndex:
+  - factory icon
   - village
   - rock_1
   - church
@@ -72,6 +74,7 @@ SpriteAtlas:
   - church icon
   - tree_1
   - button_1
+  - needle
   - tree_2
   - bar icon
   - factory
@@ -81,16 +84,15 @@ SpriteAtlas:
   - Zombie_Walk_02
   - Zombie_Walk_03
   - Zombie_Walk_01
+  - village icon
   - barrrr
   - background
   - button_2
-  - home icon
   - Human_Walk_05
   - Human_Walk_04
   - Human_Walk_06
   - Human_Walk_01
   - Human_Walk_03
   - Human_Walk_02
-  - hamer icon
   m_Tag: Sprite Atlas0
   m_IsVariant: 0

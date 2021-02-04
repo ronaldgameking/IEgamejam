@@ -32,7 +32,7 @@ public class Zombie : Character
         base.OnTriggerEnter2D(other);
         if (other.CompareTag("Human"))
         {
-            Debug.Log($"{name} should eat and infect {other.name}");
+            // Debug.Log($"{name} should eat and infect {other.name}");
         }
     }
 }

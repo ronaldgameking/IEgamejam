@@ -6,6 +6,8 @@ public class Character : MonoBehaviour
     protected CircleCollider2D cirCollider;
     protected SpriteRenderer spriteRenderer;
     protected Vector2 direction;
+    [SerializeField] protected LayerMask objectLayerMask;
+    [SerializeField] protected float searchRadius;
 
     [SerializeField] protected float moveSpeed;
 
@@ -60,6 +62,16 @@ public class Character : MonoBehaviour
             direction.y = 1 * bounce;
         else if (y >= maxY && direction.y > 0)
             direction.y = -1f * bounce;
+    }
+
+    protected virtual void LookForNearbyCharacters()
+    {
+        Collider2D[] others = Physics2D.OverlapCircleAll(transform.position, searchRadius, objectLayerMask);
+
+        foreach (Collider2D other in others)
+        {
+            
+        }
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)

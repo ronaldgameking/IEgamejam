@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Zombie : Character
 {
@@ -9,6 +10,7 @@ public class Zombie : Character
     {
         base.Awake();
         lifeTimer = lifeTime;
+        isDead = true;
     }
 
     protected override void Update()
@@ -32,6 +34,7 @@ public class Zombie : Character
         base.OnTriggerEnter2D(other);
         if (other.CompareTag("Human"))
         {
+            // ((Human)other).BecomeZombie();
             // Debug.Log($"{name} should eat and infect {other.name}");
         }
     }

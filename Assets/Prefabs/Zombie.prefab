@@ -160,6 +160,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4618e4a21e144e778facd1373297042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  searchRadius: 0
   moveSpeed: 60
   lifeTime: 30
 --- !u!50 &1068178301939109005

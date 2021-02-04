@@ -366,15 +366,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
-        type: 3}
-      propertyPath: maxSpeed
-      value: 120
+    - target: {fileID: 569466274, guid: 5fcf9e28992cb4871a682b1145abd301, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 160.33333
       objectReference: {fileID: 0}
-    - target: {fileID: 2125214971512403996, guid: 5fcf9e28992cb4871a682b1145abd301,
+    - target: {fileID: 569466274, guid: 5fcf9e28992cb4871a682b1145abd301, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 210
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988152707892382532, guid: 5fcf9e28992cb4871a682b1145abd301,
         type: 3}
-      propertyPath: minSpeed
-      value: 70
+      propertyPath: m_Size.x
+      value: 160.33333
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988152707892382532, guid: 5fcf9e28992cb4871a682b1145abd301,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 210
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988152707892382532, guid: 5fcf9e28992cb4871a682b1145abd301,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4258994298534459032, guid: ff2c0b0e6e3d44d3abe9b746e1f1da04,
+        type: 3}
+    - target: {fileID: 7988152707892382532, guid: 5fcf9e28992cb4871a682b1145abd301,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8658684187690143862, guid: 5fcf9e28992cb4871a682b1145abd301,
         type: 3}

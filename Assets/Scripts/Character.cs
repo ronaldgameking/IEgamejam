@@ -5,12 +5,19 @@ public class Character : MonoBehaviour
     protected Rigidbody2D body;
     protected CircleCollider2D cirCollider;
     protected SpriteRenderer spriteRenderer;
+    protected Animator animator;
     protected Vector2 direction;
     [SerializeField] protected LayerMask objectLayerMask;
     [SerializeField] protected float searchRadius;
 
     [SerializeField] protected float moveSpeed;
     protected Transform target;
+    protected bool isDead;
+    protected bool canMove = true;
+    public bool IsDead
+    {
+        get => isDead;
+    }
 
     protected virtual void Awake()
     {
@@ -27,10 +34,17 @@ public class Character : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         cirCollider = GetComponent<CircleCollider2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     protected virtual void Move(int bounce)
     {
+        if (!canMove)
+        {
+            body.velocity = Vector2.zero;
+            return;
+        }
+
         UpdateDirection();
         RestrictMovement(bounce);
         body.velocity = direction * moveSpeed;
@@ -87,5 +101,10 @@ public class Character : MonoBehaviour
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         // Debug.Log($"{name} collided with {other.name}");
+    }
+    
+    private void OnDrawGizmos()
+    {
+        
     }
 }

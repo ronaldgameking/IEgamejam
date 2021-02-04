@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     public List<Character> Characters
     {
         get => characters;
-        set => characters = value;
     }
 
     private void Awake()

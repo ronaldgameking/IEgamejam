@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class Human : Character
@@ -17,6 +18,7 @@ public class Human : Character
     protected override void Awake()
     {
         base.Awake();
+        isDead = false;
     }
 
     protected void Start()
@@ -62,9 +64,26 @@ public class Human : Character
 
     public void TurnToZombie()
     {
+        canMove = false;
+        animator.SetTrigger("Turn");
+    }
+    
+    public void BecomeZombie()
+    {
         Character zombie = Instantiate(zombiePrefab, transform.position, Quaternion.identity).GetComponent<Character>();
         GameManager.Instance.RemoveCharacter(this, zombie);
         InfectionShot.Instance.Reset();
         Destroy(gameObject);
+    }
+    
+    protected override void OnTriggerEnter2D(Collider2D other)
+    {
+        // base.OnTriggerEnter2D(other);
+        if (other.CompareTag("Zombie"))
+        {
+            BecomeZombie();
+            // ((Human)other).BecomeZombie();
+            // Debug.Log($"{name} should eat and infect {other.name}");
+        }
     }
 }

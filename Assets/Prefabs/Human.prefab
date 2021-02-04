@@ -187,11 +187,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec975c906eaf942ce81e1808d40eb99b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  searchRadius: 0
   moveSpeed: 0
   minRandomTime: 0.3
   maxRandomTime: 1.5
-  minSpeed: 15
-  maxSpeed: 45
+  minSpeed: 70
+  maxSpeed: 120
   zombiePrefab: {fileID: 3448195529405194917, guid: 8cd158ee1efbb49e397a84e80b3f9a12,
     type: 3}
 --- !u!50 &1068178301939109005

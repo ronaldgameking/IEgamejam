@@ -17,6 +17,6 @@ public class UIManager : MonoBehaviour
 
     public void UpdateUI()
     {
-        populationText.text = $"{GameManager.Instance.zombieAmount}/{GameManager.Instance.Characters.Count}";
+        populationText.text = $"{GameManager.Instance.ZombieAmount}/{GameManager.Instance.Characters.Count}";
     }
 }

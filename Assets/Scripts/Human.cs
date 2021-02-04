@@ -53,7 +53,7 @@ public class Human : Character
 
     private void OnMouseDown()
     {
-        if (InfectionShot.Instance.CanShoot() && GameManager.Instance.zombieAmount > 1)
+        if (InfectionShot.Instance.CanShoot())
             TurnToZombie();
     }
 
@@ -64,6 +64,7 @@ public class Human : Character
 
     public void TurnToZombie()
     {
+        isDead = true;
         canMove = false;
         animator.SetTrigger("Turn");
     }
@@ -78,12 +79,10 @@ public class Human : Character
     
     protected override void OnTriggerEnter2D(Collider2D other)
     {
-        // base.OnTriggerEnter2D(other);
+        if (isDead)
+            return;
+        
         if (other.CompareTag("Zombie"))
-        {
             BecomeZombie();
-            // ((Human)other).BecomeZombie();
-            // Debug.Log($"{name} should eat and infect {other.name}");
-        }
     }
 }

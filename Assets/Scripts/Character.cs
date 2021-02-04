@@ -33,7 +33,7 @@ public class Character : MonoBehaviour
     {
         RestrictMovement(bounce);
         body.velocity = direction * moveSpeed;
-        spriteRenderer.sortingOrder = 5000 - Mathf.RoundToInt(transform.position.y);
+        spriteRenderer.sortingOrder = -Mathf.RoundToInt(transform.position.y);
     }
 
     private void RestrictMovement(int bounce)
@@ -64,6 +64,6 @@ public class Character : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"{name} collided with {other.name}");
+        // Debug.Log($"{name} collided with {other.name}");
     }
 }

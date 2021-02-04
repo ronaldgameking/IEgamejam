@@ -18,7 +18,6 @@ public class Human : Character
     public InfectionShot infectionShot;
     public GameManager Settings;
     public Zombie p_Zombie;
-    public GameObject zombie;
     private Vector3 Location;
 
     protected override void Awake()
@@ -74,15 +73,5 @@ public class Human : Character
         Instantiate(p_Zombie, Location, Quaternion.identity);
         infectionShot.Reset();
         Destroy(gameObject);
-    }
-    protected override void OnTriggerEnter2D(Collider2D other)
-    {
-        base.OnTriggerEnter2D(other);
-        if (other.CompareTag("Zombie"))
-        {
-            //Debug.Log($"{name} should eat and infect {other.name}");
-            Instantiate(zombie, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-        }
     }
 }

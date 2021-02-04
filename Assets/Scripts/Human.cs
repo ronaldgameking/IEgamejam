@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class Human : Character
@@ -14,11 +11,9 @@ public class Human : Character
     
     private float randomDirectionTime;
     private float randomDirectionTimer;
-
-    public InfectionShot infectionShot;
-    public GameManager Settings;
-    public Zombie p_Zombie;
-    private Vector3 Location;
+    
+    public Zombie zombiePrefab;
+    private Vector2 targetLocation;
 
     protected override void Awake()
     {
@@ -27,11 +22,6 @@ public class Human : Character
 
     protected void Start()
     {
-        GameObject Infection = GameObject.Find("Canvas/ShotObject");
-        infectionShot = Infection.GetComponent<InfectionShot>();
-        GameObject gameManager = GameObject.Find("GameManager");
-        Settings = gameManager.GetComponent<GameManager>();
-
         moveSpeed = Random.Range(minSpeed, maxSpeed);
 
         GetRandomDirection();
@@ -62,16 +52,15 @@ public class Human : Character
 
     private void OnMouseDown()
     {
-        if (infectionShot.CanShoot() && Settings.zombieAmount > 1)
+        if (InfectionShot.Instance.CanShoot() && GameManager.Instance.zombieAmount > 1)
             TurnToZombie();
     }
 
     public void TurnToZombie()
     {
-        Settings.RemoveHuman();
-        Location = transform.position;
-        Instantiate(p_Zombie, Location, Quaternion.identity);
-        infectionShot.Reset();
+        GameManager.Instance.RemoveCharacter(false);
+        Instantiate(zombiePrefab, transform.position, Quaternion.identity);
+        InfectionShot.Instance.Reset();
         Destroy(gameObject);
     }
 }

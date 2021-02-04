@@ -1,23 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Zombie : Character
 {
-    public float Timer;
-    public float lifetime = 30;
+    private float lifeTimer;
+    [SerializeField] private float lifeTime = 30;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        lifeTimer = lifeTime;
+    }
 
     protected override void Update()
     {
         GetInput();
         Move(0);
 
-        Timer += Time.deltaTime;
+        lifeTimer -= Time.deltaTime;
 
-        if (Timer > lifetime)
-        {
-            Destroy(gameObject);
-        }
+        if (lifeTimer <= 0)
+            GameManager.Instance.RemoveCharacter(true);
     }
 
     private void GetInput()

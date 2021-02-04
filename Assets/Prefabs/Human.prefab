@@ -192,9 +192,7 @@ MonoBehaviour:
   maxRandomTime: 1.5
   minSpeed: 15
   maxSpeed: 45
-  infectionShot: {fileID: 0}
-  Settings: {fileID: 0}
-  p_Zombie: {fileID: 3448195529405194917, guid: 8cd158ee1efbb49e397a84e80b3f9a12,
+  zombiePrefab: {fileID: 3448195529405194917, guid: 8cd158ee1efbb49e397a84e80b3f9a12,
     type: 3}
 --- !u!50 &1068178301939109005
 Rigidbody2D:

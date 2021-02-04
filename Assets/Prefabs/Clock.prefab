@@ -206,12 +206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cebd22f70f1fae479af7190e6bdbf37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
-  quarterTimer: 0
-  speed: 2
   handTransform: {fileID: 5506800557141106430}
-  bell: {fileID: 0}
-  gm: {fileID: 0}
+  speed: 2
   currentClockState: 0
 --- !u!1 &6571405000311430179
 GameObject:

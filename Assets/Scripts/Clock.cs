@@ -1,60 +1,50 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Clock : MonoBehaviour
 {
-    public float timer;
-    public Transform handTransform;
+    public static Clock Instance = null;
+    
+    [SerializeField] private Transform handTransform;
+    
+    private float timer;
+    private float quarterTimer = 0;
+    [SerializeField] private float speed = 4;
 
-    public AudioManager bell;
-    public GameManager gm;
-    public ClockState currentClockState;
+    [SerializeField] private ClockState currentClockState;
 
-    private void Start()
+    private void Awake()
     {
+        if (Instance == null)
+            Instance = this;
+        else if (Instance != this)
+            Destroy(gameObject);
+        
         currentClockState = ClockState.Church;
-        if (bell == null) bell = GameObject.Find("GameManager").GetComponent<AudioManager>();
-    }
-    void LateUpdate()
-    {
-        timer = gm.timer;
-        handTransform.rotation = Quaternion.Euler(0, 0, -timer * 6);
     }
 
-    public void PlayBell()
+    private void Update()
     {
-        bell.Play("Bell");
+        timer = (timer + Time.deltaTime * speed) % 60;
+        quarterTimer += Time.deltaTime * speed;
+
+        if (quarterTimer >= 15)
+            ChangeState();
+
+        handTransform.eulerAngles = new Vector3(0, 0, -timer * 6);
     }
 
-    public void ChangeState(float timer)
+    private void ChangeState()
     {
         if (timer >= 45)
-        {
             currentClockState = ClockState.Home;
-        }
         else if (timer >= 30)
-        {
             currentClockState = ClockState.Fabric;
-        }
         else if (timer >= 15)
-        {
             currentClockState = ClockState.Cafe;
-        }
-        else if (timer >= 0)
-        {
+        else
             currentClockState = ClockState.Church;
-        }
-        
-        PlayBell();
-        gm.quarterTimer -= 15;
-    }
-}
 
-public enum ClockState : int
-{
-    Church = 0,
-    Cafe,
-    Fabric,
-    Home
+        AudioManager.Instance.Play("Bell");
+        quarterTimer -= 15;
+    }
 }

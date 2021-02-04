@@ -1,36 +1,22 @@
 ﻿using UnityEngine;
-using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public Clock clockInstance;
-    [ReadOnly] public float timer;
-    public float quarterTimer = 0;
-    public float speed = 4;
-
+    public static GameManager Instance = null;
+    
     public float zombieAmount = 99;
-    public TMP_Text indicator;
 
-    private void Update()
+    private void Awake()
     {
-        timer = (timer + Time.deltaTime * speed) % 60;
-        quarterTimer += Time.deltaTime * speed;
-
-        if (quarterTimer >= 15)
-        {
-            clockInstance.ChangeState(timer);
-        }
-        UpdateUI();
+        if (Instance == null)
+            Instance = this;
+        else if (Instance != this)
+            Destroy(gameObject);
     }
 
-    public void UpdateUI()
-    {
-        indicator.text = (zombieAmount + "/100");
-    }
-
-    public void RemoveHuman()
+    public void RemoveCharacter(bool isZombie)
     {
         zombieAmount--;
+        UIManager.Instance.UpdateUI();
     }
-
 }

@@ -1,41 +1,42 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class InfectionShot : MonoBehaviour
 {
-    public Image FillImage;
-    public float Timer;
-    public float RechargeTime = 1;
-
+    public static InfectionShot Instance = null;
+    
+    public Image fillImage;
+    public float timer;
+    public float rechargeTime = 1;
 
     private void Awake()
     {
-        FillImage.fillAmount = 0;
+        if (Instance == null)
+            Instance = this;
+        else if (Instance != this)
+            Destroy(gameObject);
+        
+        timer = 0;
+        fillImage.fillAmount = timer;
     }
 
     private void Update()
     {
-        Timer += Time.deltaTime;
+        timer += Time.deltaTime;
 
-        FillImage.fillAmount = Mathf.Clamp01(Timer / RechargeTime);
+        fillImage.fillAmount = Mathf.Clamp01(timer / rechargeTime);
     }
 
     public void Reset()
     {
-        Timer = 0;
+        timer = 0;
     }
 
     public bool CanShoot()
     {
-        if (Timer >= RechargeTime)
-        {
+        if (timer >= rechargeTime)
             return true;
-        }
-        else
-        {
-            return false;
-        }
+        
+        return false;
     }
 }
